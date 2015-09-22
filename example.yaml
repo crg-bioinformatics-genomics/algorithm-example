@@ -1,0 +1,66 @@
+---
+title:      example
+name:       example
+title_styled:   >
+    example
+version:    1.0
+description:    >
+    example is an algorithm for the visualization of protein physico-chemical profiles.
+
+description_short:    >
+    example is an algorithm for the visualization of protein physico-chemical profiles.
+    
+nav_links:
+    -   title:  >
+            example Home
+        href:   >
+            http://service.tartaglialab.com/new_submission/example          
+    -   title:  >
+            Tutorial
+        href:   >
+            http://service.tartaglialab.com/static_files/shared/tutorial_example.html        
+    -   title:  >
+            Group page @ CRG
+        href:   >
+            http://pasteur.crg.es/portal/page/portal/827A462EAB6802B3E04012AC0E01291B
+
+form_fields:
+    -   name: title
+        description: Submission label (optional)
+        required: No
+        type: text
+    -   name: protein_seq
+        description: Protein sequence (FASTA format)
+        required: Yes
+        type: textarea
+    -   name: email
+        description: Email address (optional, used for notification)
+        type: email
+        required: No
+    -   name: feature
+        description: <b>Physico-chemical features</b> 
+        type: radio
+        required: Yes                
+        entries:
+            -   title:  Alpha-helix (Deleage-Roux, 1987)
+                value:  alphahelix
+            -   title:  Beta-sheet (Chou-Fasman, 1978)
+                value:  betasheet 
+            -   title:  Disorder (Dunker, 2008)
+                value:  disorder
+            -   title:  Hydrophobicity (Eisenberg, 1984)
+                value:  hydrophobicity
+                                    
+examples:
+    -   reference_id:   75964
+        title:          My first profile
+        description:    (Me et al. 2015)
+
+algorithm:
+    command:              "example.py -output_dir=<output_dir>"
+    processing_timeout:   7200
+    
+# for the processing part
+output:
+    - 
+
